@@ -1,3 +1,5 @@
+// Question->All of the above questions from 3-6 needs to be done with arrow functions also
+
 
 //Q3 SOlution
 const outerfunction=(insidefunction) =>

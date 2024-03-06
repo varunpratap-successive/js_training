@@ -1,9 +1,11 @@
-const outerfunction=function(insidefunction)
-{ console.log("Outer function called");
-   insidefunction();
-}
-const insidefunction=function()
-{ console.log("inside function called");
-}
+// Question-> Write a function expression that takes in another function as an argument
 
-outerfunction(insidefunction);
+const outerFunction = function (insideFunction) {
+  console.log("Outer function called");
+  insideFunction();
+};
+const insideFunction = function () {
+  console.log("inside function called");
+};
+
+outerFunction(insideFunction);
