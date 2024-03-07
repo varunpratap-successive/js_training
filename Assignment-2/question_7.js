@@ -1,7 +1,7 @@
 // Question->All of the above questions from 3-6 needs to be done with arrow functions also
 
 
-//Q3 SOlution
+//Q3 Solution
 const outerfunction=(insidefunction) =>
 { console.log("Outer function called");
    insidefunction();
@@ -14,24 +14,15 @@ outerfunction(insidefunction);
 
 // Q4 Solution
 
-const square = (number1) => {
-    return number1*number1;
-  }
+const square = (number1) => number1*number1;
 console.log(square(5));
 
 // Q5 Solution
 
-const sum = (num1,num2) => {
-    return num1+num2;
-  }
+const sum = (num1,num2) =>num1+num2;
 console.log(sum(5,4));
 
-// Q6
+// Q6 Solution
 
-const checkevenodd= (number1)=> { 
-    if(number1%2==0)
-    return true;
-    else 
-    return false;
- }
- console.log(checkevenodd(5));
+let checkevenodd =(number1) =>(number1 % 2 == 0) ;
+console.log(checkevenodd(8));

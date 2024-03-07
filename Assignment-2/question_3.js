@@ -4,8 +4,7 @@ const outerFunction = function (insideFunction) {
   console.log("Outer function called");
   insideFunction();
 };
-const insideFunction = function () {
-  console.log("inside function called");
-};
+const insideFunction = ()=>console.log("inside function called");
+
 
 outerFunction(insideFunction);
