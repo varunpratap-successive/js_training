@@ -11,12 +11,14 @@ for (let i = 0; i < inputArray.length; i++) {
       inputArray.lastIndexOf(inputArray[i]) &&
     trackerString.includes(inputArray[i]) == false
   ) {
+    //means duplicate element found
     outputString += inputArray[i];
     outputString += ":";
-    outputString += i;
+    outputString += i; //first index of duplicate element stored
     trackerString += inputArray[i];
   }
   for (let j = i + 1; j < inputArray.length; j++) {
+    //to store remaining index of duplicate elements as we have to store all duplicate index
     if (inputArray[i] === inputArray[j]) {
       outputString += j;
       flag = true;

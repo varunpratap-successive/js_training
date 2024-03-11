@@ -4,12 +4,15 @@ let array1 = [1, 5, 7, 8, 9];
 let array2 = [1, 7, 9];
 let intersectedArray = [];
 
-for (let i = 0; i < array2.length; i++) {
-  for (let j = 0; j < array1.length; j++) {
-    if (array2[i] == array1[j]) {
-      intersectedArray.push(array2[i]);
-      break;
+let flagEnter = false;
+
+array2.forEach((element1) => {
+  flagEnter = false;
+  array1.forEach((element2) => {
+    if (element1 == element2 && flagEnter == false) {
+      intersectedArray.push(element2);
+      flagEnter = true;
     }
-  }
-}
+  });
+});
 console.log(intersectedArray);

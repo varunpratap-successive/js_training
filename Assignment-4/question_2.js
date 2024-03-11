@@ -2,18 +2,28 @@
 
 let originalstr = "Hello John";
 let numArray = originalstr.split(" ");
+let outputArray = [];
 
-let reversedstr = "";
-
-let finalstr = "";
 for (let j = 0; j < numArray.length; j++) {
   let str = numArray[j];
 
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversedstr += str[i];
-  }
+  let splitStr = str.split("");
 
-  finalstr += reversedstr + " ";
-  reversedstr = "";
+  let left = 0;
+  let right = splitStr.length - 1;
+
+  while (left < right) {
+    let temp = splitStr[right];
+    splitStr[right] = splitStr[left];
+    splitStr[left] = temp;
+
+    left++;
+    right--;
+  }
+  let reversedStr = splitStr.join("");
+  outputArray.push(reversedStr);
 }
-console.log(finalstr);
+
+let finalArray = outputArray.join(" ");
+
+console.log(finalArray);

@@ -1,7 +1,8 @@
 //Question->Write a program to find sum of an array
 
-let arr = [1, 2, 3, 5, 6];
-let sum = 0;
+let array = [1, 2, 3, 5, 6];
 
-arr.forEach((item) => {sum += item;});
+const sum = array.reduce((accumulator, currentValue)=> accumulator+currentValue);
+  
 console.log(sum);
+
